@@ -1,6 +1,134 @@
 body {
-    background: #f7f9fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6f8fa;
+    color: #222;
+    margin: 0;
+    padding: 0;
 }
-.card {
-    margin-top: 50px;
+
+header, nav {
+    background: #262a33;
+    color: #fff;
+    padding: 16px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    color: #34495e;
+    margin-bottom: 18px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 32px;
+}
+
+.details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.details li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 400px;
+    background: #f9f9f9;
+    padding: 24px 28px;
+    border-radius: 7px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+    font-size: 1em;
+}
+
+input[type="text"], input[type="password"], input[type="number"], input[type="date"], input[type="email"], select {
+    width: 100%;
+    padding: 9px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    background: #fdfdfd;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="email"]:focus, select:focus {
+    border-color: #3498db;
+}
+
+button, input[type="submit"] {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 22px;
+    font-size: 1.05em;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #217dbb;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+
+th, td {
+    padding: 13px 14px;
+    border-bottom: 1px solid #ececec;
+    text-align: left;
+}
+
+th {
+    background: #f0f4f8;
+    color: #34495e;
+    font-weight: 600;
+    font-size: 1.05em;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.flash {
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: 12px 18px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1.03em;
 }

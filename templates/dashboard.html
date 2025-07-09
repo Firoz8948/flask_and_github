@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Welcome, {{ user.name }}</h2>
+<div class="details">
+    <ul>
+        <li><strong>Code:</strong> {{ user.code }}</li>
+        <li><strong>Age:</strong> {{ user.age }}</li>
+        <li><strong>Plan Name:</strong> {{ user.plan_name }}</li>
+        <li><strong>Amount:</strong> ₹{{ '{:.2f}'.format(user.amount) }}</li>
+        <li><strong>Expiry Date:</strong> {{ user.expiry_date.strftime('%Y-%m-%d') }}</li>
+        <li><strong>Days Remaining:</strong> 
+          {% if days_remaining >= 0 %}
+            {{ days_remaining }} day{{ 's' if days_remaining != 1 else '' }}
+          {% else %}
+            Expired
+          {% endif %}
+        </li>
+        <li><strong>Registered On:</strong> {{ user.registered_on.strftime('%Y-%m-%d') }}</li>
+    </ul>
+</div>
+<p><a href="{{ url_for('logout') }}">Logout</a></p>
+{% endblock %}
