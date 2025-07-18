@@ -1,10 +1,28 @@
-{% extends 'base.html' %}
-{% block content %}
-<h2>Login</h2>
-<form method="post" action="{{ url_for('login') }}" class="form">
-    <label>Enter your 4-digit Code:</label>
-    <input type="text" name="code" pattern="\d{4}" maxlength="4" required>
-    <button type="submit">Login</button>
-</form>
-<p>Not registered yet? <a href="{{ url_for('register') }}">Register here</a></p>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Gym Management System</h1>
+        <nav>
+            <!-- <a href="/dashboard">Dashboard</a> | -->
+            <a href="/login">Login</a> |
+            <a href="/register">Register</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Login</h2>
+        {{error}}
+        <form method="post" action="/login">
+            <label for="code">Your 4-digit Code:</label>
+            <input type="text" id="code" name="code" maxlength="4" minlength="4" required pattern="\d{4}">
+            <input type="submit" value="Login">
+        </form>
+        <a href="/register">Register</a>
+    </div>
+</body>
+</html>

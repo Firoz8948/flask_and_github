@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Membership Expired</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Gym Management System</h1>
+        <nav>
+            <a href="/dashboard">Dashboard</a> |
+            <a href="/login">Login</a> |
+            <a href="/register">Register</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Membership Expired</h2>
+        <p>Your membership expired on <strong>{{expiry_date}}</strong>.</p>
+        <a href="/register">Renew Membership</a>
+        <br>
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>
